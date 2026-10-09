@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- Reyof · github.com/4lac -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="scene" class="hidden">
+  <div id="app">
+
+    <!-- top bar -->
+    <div class="topbar">
+      <div class="logo-wrap">
+        <div class="logo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </div>
+        <div class="brand">REYOF <span>INSPECTOR</span></div>
+      </div>
+      <div class="topnav">SERVER <i>//</i> DIAGNOSTICS</div>
+      <div class="winbtns"><span class="cl" id="xClose"></span></div>
+    </div>
+
+    <!-- hero: ring + score + status -->
+    <div class="hero">
+      <div class="ring">
+        <svg viewBox="0 0 160 160">
+          <circle class="rtrack" cx="80" cy="80" r="66"/>
+          <circle class="rfill" id="ringFill" cx="80" cy="80" r="66"/>
+          <circle class="rtrack2" cx="80" cy="80" r="50"/>
+        </svg>
+        <div class="ring-mid">
+          <div class="score-v" id="scoreV">—</div>
+          <div class="score-l">HEALTH</div>
+        </div>
+      </div>
+
+      <div class="hero-info">
+        <div class="verdict" id="verdict">READY</div>
+        <div class="hero-sub" id="heroSub">Press RUN SCAN to inspect the server</div>
+        <div class="stat-row">
+          <div class="stat fail"><b id="cFail">0</b><span>Errors</span></div>
+          <div class="stat warn"><b id="cWarn">0</b><span>Warnings</span></div>
+          <div class="stat ok"><b id="cOk">0</b><span>Passed</span></div>
+          <div class="stat"><b id="cRes">—</b><span>Resources</span></div>
+        </div>
+        <div class="progress"><i class="fail" id="pFail"></i><i class="warn" id="pWarn"></i><i class="ok" id="pOk"></i></div>
+      </div>
+
+      <button id="run" class="run"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/></svg>RUN SCAN</button>
+    </div>
+
+    <!-- filters -->
+    <div class="filters" id="filters">
+      <button class="f active" data-f="all">All</button>
+      <button class="f" data-f="fail">Errors</button>
+      <button class="f" data-f="warn">Warnings</button>
+      <button class="f" data-f="ok">Passed</button>
+      <span class="scanning" id="scanTag">Scanning…</span>
+    </div>
+
+    <!-- results -->
+    <div class="rc-list" id="list"><div class="empty">Press RUN SCAN to inspect the server.</div></div>
+
+    <!-- footer -->
+    <div class="foot">
+      <span class="credit">REYOF INSPECTOR · github.com/4lac</span>
+      <span class="hint">هذي الأداة تمسك مشاكل التركيب والتعارضات — أخطاء الكود الحمراء راجعها بالكونسول</span>
+    </div>
+
+  </div>
+</div>
+<script src="app.js"></script>
+<script src="credit.js"></script>
+</body>
+</html>
